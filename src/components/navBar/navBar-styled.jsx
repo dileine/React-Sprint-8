@@ -13,7 +13,7 @@ ul {
   list-style: none;
   text-transform: uppercase;
 }
-li {
+button {
   height: 3.5rem;
   line-height: 3.5rem;
   text-align: center;

@@ -7,9 +7,10 @@ export const THEME = {
   },
 
   colors: {
-    background: "#111",
+    background: "#000",
+    backgroundText: "#999",
+    border: "#F00",
     borderButton: "#ccc",
-    divisor: "#444",
     font: "#eef",
     disabled: "#777",
   },

@@ -1,49 +1,40 @@
 import React from "react";
 import { useFetchAPI } from "../../hooks/useFetchAPI";
 import { useState } from "react";
-import { endPoints } from "../../constants/endpoints";
-import { Container, ContainerButtons } from "./starshipsList-styled";
+import { ENDPOINTS } from "../../constants/endpoints";
+import { Container, Item } from "./starshipsList-styled";
+import Pagination from "../pagination/pagination";
+import { getItemId } from "../../utils/getItemId";
+import NavLink from "../../utils/navlink"
 
 
 const StarshipsList = () => {
     const [page, setPage] = useState(1);
     console.log(page);
-    const url = endPoints.starshipsAlt; 
-    const { data, next, loading, error } = useFetchAPI (url, page);
+    const url =ENDPOINTS.starships;
+    const { data, next, loading, error} = useFetchAPI (url, page);
+    console.log(data, next, loading, error);
 
-    return (
-        <Container>
-        {loading && <div >loading data...</div>}
-        {error && <div>Error: {error}</div>}
-        {data && (
-             <ContainerButtons>
-             <ul>
-               {data.map((starship, index) => (
-                 <div key={index}>                
-                   <li>{starship.name}</li>
-                   <li>{starship.model}</li>
-                 </div>
-               ))}
-             </ul>
-            
-               <button
-                 onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
-                 disabled={page === 1}>
-                 Previous
-               </button>
-               {/*<span>{page}</span>*/}
-               <button
-                 onClick={() => {
-                   if (next) setPage((prev) => prev + 1);
-                 }}
-                 disabled={!next}>
-                 Next
-               </button>
-            
-           </ContainerButtons>
-        )}  
-       
-       </Container>)
+    return(<Container>
+       {loading && <div style={{ textAlign: "center" }}>loading data...</div>}
+      {error && <div style={{ textAlign: "center" }}>Error: {error}</div>}
+      {data && (
+        <>
+    <ul>
+{data.map((starship, index)=>(
+  <Item key={index}>
+  <NavLink to={`/starships/${getItemId(starship.url)}`}>
+    <li>{starship.name}</li>
+    <li>{starship.model}</li>
+  </NavLink>
+</Item>
+))}
+    </ul>
+    <Pagination page={page} setPage={setPage} next={next}/>
+    </>)}
+    </Container>
+    )
+
 
 }
 

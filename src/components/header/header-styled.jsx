@@ -21,9 +21,9 @@ export const Container = styled.div`
     margin-right: 2rem;
   }
   img {
-    max-height: 10rem;
+    max-height: 15rem;
     min-height: 5rem;
-    max-width: 40%;
+    max-width: 60%;
     height: auto;
   }
   button {
@@ -39,12 +39,5 @@ export const Container = styled.div`
   }
   button:hover {
     border-color: ${({ theme }) => theme.colors.borderButton};
-  }
-  @media (max-width: ${({ theme }) => theme.width.tablet}) {
-    flex-direction: column;
-    gap: 2rem;
-    div:nth-of-type(2) {
-      margin: 0;
-    }
   }
 `;
