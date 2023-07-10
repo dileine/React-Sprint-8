@@ -6,20 +6,20 @@ display: flex;
 justify-content: center;
 align-items: center;
 border-style: solid;
-border-color: ${({ theme }) => theme.colors.divisor};
+border-color: ${({ theme }) => theme.colors.font};
 border-width: 0.1rem 0;
 ul {
   display: flex;
   list-style: none;
   text-transform: uppercase;
 }
-button {
+li {
   height: 3.5rem;
   line-height: 3.5rem;
   text-align: center;
   padding: 0 1.75rem;
   border-style: solid;
-  border-color: ${({ theme }) => theme.colors.divisor};
+  border-color: ${({ theme }) => theme.colors.font};
   border-width: 0 0.1rem;
 }
 li:nth-child(1) {
@@ -33,10 +33,10 @@ li:nth-child(2) {
   text-align: center;
   text-decoration: none;
   font-size: 1.3rem;
-  color: ${({ theme }) => theme.colors.disabled};
+  color: ${({ theme }) => theme.colors.font};
 }
 .active {
-  border-bottom: 0.2rem solid #0d66d7;
+  border-bottom: 0.2rem solid ${({ theme }) => theme.colors.border};
 }
 .active .link {
   color: ${({ theme }) => theme.colors.font};

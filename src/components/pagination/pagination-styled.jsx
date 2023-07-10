@@ -9,7 +9,7 @@ export const Container = styled.div`
   gap: 2rem;
   margin-top: 1rem;
   button {
-    width: 6rem;
+    width: 10rem;
     background-color:  ${({ theme }) => theme.colors.background};
    
     font-size: 1rem;
@@ -20,7 +20,8 @@ export const Container = styled.div`
     cursor: pointer;
   }
   button:hover {
-    border-color: white;
+    outline: 0.1rem solid ${({ theme }) => theme.colors.border};
+    border-radius: 0.5rem;
   }
   span {
     font-size: 1.5rem;
@@ -28,3 +29,4 @@ export const Container = styled.div`
   }
   
 `;
+

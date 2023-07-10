@@ -1,3 +1,4 @@
+import React from "react";
 import { Container } from "./pagination-styled"
 
 const Pagination = ({page, setPage, next}) => {
@@ -18,3 +19,5 @@ const Pagination = ({page, setPage, next}) => {
 }
 
 export default Pagination;
+
+

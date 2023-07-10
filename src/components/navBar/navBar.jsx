@@ -14,13 +14,13 @@ const NavBar = () => {
     <ul>
         <li
           onClick={() => dispatch({type: "homeClick"})}
-          className={home ? "actiu" : ""}>
-          <NavLink className="link" to="*">Home</NavLink>
+          className={home ? "active" : ""}>
+          <NavLink className="link" to="">Home</NavLink>
         </li>
         <li
           onClick={() => dispatch({type: "starshipsClick"})}
-          className={starships ? "actiu" : ""}>
-          <NavLink className="link" to="">Starships</NavLink>
+          className={starships ? "active" : ""}>
+          <NavLink className="link" to="/starships">Starships</NavLink>
         </li>
       </ul>
     </Container>
