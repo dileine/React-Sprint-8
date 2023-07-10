@@ -28,8 +28,7 @@ export const fetchAPIImg = async (imgUrl, setImg, setImgError, signal) => {
       url: imgUrl,
       signal: signal,
     });
-    setImg(res.data);
-    console.log("Response data:" + res.data);
+    setImg(imgUrl);
   } catch (err) {
     setImgError(ENDPOINTS.noImg);
     console.log("Error loading the image");
