@@ -10,10 +10,10 @@ import NavLink from "../../utils/navlink"
 
 const StarshipsList = () => {
     const [page, setPage] = useState(1);
-    console.log(page);
+   
     const url =ENDPOINTS.starships;
     const { data, next, loading, error} = useFetchAPI (url, page);
-    console.log(data, next, loading, error);
+   
 
     return(<Container>
        {loading && <div style={{ textAlign: "center" }}>loading data...</div>}

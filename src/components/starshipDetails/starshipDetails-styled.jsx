@@ -77,21 +77,6 @@ export const Container = styled.div`
 		}
 	}
 
-	button {
-		width: 12rem;
-		background-color: ${({ theme }) => theme.colors.background};
-		padding: 1rem;
-		font-size: 1.3rem;
-		color: ${({ theme }) => theme.colors.font};
-		border: 0.1rem solid transparent;
-		border-radius: 0.5rem;
-		text-transform: uppercase;
-		cursor: pointer;
-	}
-
-	button:hover {
-		border-color: ${({ theme }) => theme.colors.borderButton};
-	}
-
+	
 	
 `;
