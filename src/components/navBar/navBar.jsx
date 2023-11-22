@@ -1,12 +1,11 @@
-import React from "react";
-import { useReducer } from "react";
+import React, {useReducer} from "react";
 import { Container } from "./navBar-styled";
 import NavLink from "../../utils/navlink";
 import { SwitchNavLink } from "../../utils/switchNavLink";
 
 const NavBar = () => {
 
-    const [state, dispatch] = useReducer(SwitchNavLink, { home: false, starships: true });
+    const [state, dispatch] = useReducer(SwitchNavLink, { home: false, starships: false });
     const { home, starships } = state;
 
     

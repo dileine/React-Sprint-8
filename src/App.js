@@ -1,4 +1,3 @@
-import "../src/css/App.css";
 import { THEME } from "./constants/theme";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./components/globalStyles/globalStyles";

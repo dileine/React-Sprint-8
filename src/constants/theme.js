@@ -9,7 +9,7 @@ export const THEME = {
   colors: {
     background: "#000",
     backgroundText: "#999",
-    border: "#F00",
+    border: "#FF0",
     borderButton: "#ccc",
     font: "#eef",
     disabled: "#777",

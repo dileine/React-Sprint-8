@@ -1,5 +1,7 @@
 import logo from "../../assets/img/logoStarWars.png";
+import { NavBarButtons } from "../navBarButtons/NavBarButtons";
 import { Container } from "./header-styled";
+
 
 const Header = () => {
     return(
@@ -7,10 +9,9 @@ const Header = () => {
     <div>
     <img src={logo} alt="Star Wars logo" />
      </div>
-    <div>
-    <button>log in</button>
-    <button>sign up</button>
-    </div>
+     <div>
+     <NavBarButtons/>
+     </div>
     </Container>)
 }
 

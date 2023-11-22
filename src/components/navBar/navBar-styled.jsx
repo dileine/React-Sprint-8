@@ -18,9 +18,6 @@ li {
   line-height: 3.5rem;
   text-align: center;
   padding: 0 1.75rem;
-  border-style: solid;
-  border-color: ${({ theme }) => theme.colors.font};
-  border-width: 0 0.1rem;
 }
 li:nth-child(1) {
   width: 8rem;
@@ -35,10 +32,7 @@ li:nth-child(2) {
   font-size: 1.3rem;
   color: ${({ theme }) => theme.colors.font};
 }
-.active {
-  border-bottom: 0.2rem solid ${({ theme }) => theme.colors.border};
-}
-.active .link {
-  color: ${({ theme }) => theme.colors.font};
+.active .link{
+  color: ${({ theme }) => theme.colors.border};
 }
 `;
