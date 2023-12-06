@@ -3,13 +3,13 @@ import { useAuth0 } from "@auth0/auth0-react";
 import LoginButton from "../../components/loginButton/LoginButton";
 import LogoutButton from "../../components/logoutButton/LogoutButton";
 import SignupButton  from "../../components/signUpButton/SignupButton";
-
+import { Container } from "./NavBarButtons-styled";
 
 export const NavBarButtons = () => {
   const { isAuthenticated } = useAuth0();
 
   return (
-    <div>
+    <Container>
       {!isAuthenticated && (
         <>
           <SignupButton />
@@ -21,6 +21,6 @@ export const NavBarButtons = () => {
           <LogoutButton />
         </>
       )}
-    </div>
+    </Container>
   );
 };

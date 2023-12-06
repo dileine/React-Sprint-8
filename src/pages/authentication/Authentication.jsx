@@ -1,5 +1,5 @@
 import React from "react";
-import { useAuth0 } from "@auth0/auth0-react";
+import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
 import LoginButton from "../../components/loginButton/LoginButton";
 import LogoutButton from "../../components/logoutButton/LogoutButton";
 import SignupButton  from "../../components/signUpButton/SignupButton";
@@ -13,7 +13,7 @@ const { isAuthenticated, user } = useAuth0();
             <p>Welcome, {user?.name}</p>
             <LogoutButton />
             </>
-        ): (
+        ): ( 
             <div>
                 <SignupButton/>
                 <LoginButton/>
@@ -23,4 +23,6 @@ const { isAuthenticated, user } = useAuth0();
     )
 }
 
-export default Authentication;
+export default withAuthenticationRequired(Authentication, {
+    returnTo: '/home',
+});
