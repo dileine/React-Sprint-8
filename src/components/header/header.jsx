@@ -1,5 +1,5 @@
 import logo from "../../assets/img/logoStarWars.png";
-import { NavBarButtons } from "../navBarButtons/NavBarButtons";
+import NavBarButtons from "../navBarButtons/NavBarButtons";
 import { Container } from "./header-styled";
 
 

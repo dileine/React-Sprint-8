@@ -16,22 +16,23 @@ const StarshipsList = () => {
    
 
     return(<Container>
-       {loading && <div style={{ textAlign: "center" }}>loading data...</div>}
+      {loading && <div style={{ textAlign: "center" }}>loading data...</div>}
       {error && <div style={{ textAlign: "center" }}>Error: {error}</div>}
       {data && (
         <>
-    <ul>
-{data.map((starship, index)=>(
-  <Item key={index}>
-  <NavLink to={`/starships/${getItemId(starship.url)}`}>
-    <li>{starship.name}</li>
-    <li>{starship.model}</li>
-  </NavLink>
-</Item>
-))}
-    </ul>
-    <Pagination page={page} setPage={setPage} next={next}/>
-    </>)}
+         <ul>
+         {data.map((starship, index)=>(
+          <Item key={index}>
+          <NavLink to={`/starships/${getItemId(starship.url)}`}>
+          <li>{starship.name}</li>
+          <li>{starship.model}</li>
+          </NavLink>
+          </Item>
+          ))}
+         </ul>
+          <Pagination page={page} setPage={setPage} next={next}/>
+         </>
+         )}
     </Container>
     )
 

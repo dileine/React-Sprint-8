@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import { Auth0Provider } from "@auth0/auth0-react";
@@ -14,6 +14,8 @@ root.render(
         domain={auth0Config.domain}
         clientId={auth0Config.clientId}
         redirectUri={auth0Config.authorizationParams.redirectUri}
+        audience={auth0Config.audience}
+        scope={auth0Config.scope}
       >
         <App />
       </Auth0Provider>

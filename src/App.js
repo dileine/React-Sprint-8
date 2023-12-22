@@ -1,3 +1,4 @@
+import React from "react";
 import { THEME } from "./constants/theme";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./components/globalStyles/globalStyles";
@@ -9,13 +10,10 @@ function App() {
   return (
     <ThemeProvider theme={THEME}>
       <GlobalStyles />
-      <header>
-        <Header />
-        <NavBar />
-      </header>
-      <main>
-        <Router />
-      </main>
+      <Header />
+      <NavBar />
+
+      <Router />
     </ThemeProvider>
   );
 }
